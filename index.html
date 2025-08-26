@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nama Saya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A313E',
+                        surface: '#F7F7F7',
+                        tint: '#EBF1F0',
+                        text: '#333333',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased bg-surface text-text">
+
+    <header class="bg-white/80 backdrop-blur shadow-sm py-4 fixed top-0 left-0 w-full z-50">
+        <nav class="container flex justify-between items-center">
+            <a href="./index.html" class="text-2xl font-bold text-primary">Okta Mukaffa</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="./index.html" class="nav-link">Beranda</a></li>
+                <li><a href="./tentang.html" class="nav-link">Tentang</a></li>
+                <li><a href="./layanan.html" class="nav-link">Layanan</a></li>
+                <li><a href="./testimoni.html" class="nav-link">Testimoni</a></li>
+                <li><a href="./kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-vodecoGreen focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu-overlay" class="md:hidden fixed inset-0 bg-white z-40 hidden">
+            <div class="flex justify-end p-4">
+                <button id="close-mobile-menu" class="text-vodecoGreen hover:text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="flex flex-col items-center space-y-4 text-vodecoGreen text-lg">
+                <li><a href="./index.html" class="hover:text-gray-600" onclick="closeMobileMenu()">Beranda</a></li>
+                <li><a href="./tentang.html" class="hover:text-gray-600" onclick="closeMobileMenu()">Tentang</a></li>
+                <li><a href="./layanan.html" class="hover:text-gray-600" onclick="closeMobileMenu()">Layanan</a></li>
+                <li><a href="./testimoni.html" class="hover:text-gray-600" onclick="closeMobileMenu()">Testimoni</a></li>
+                <li><a href="./kontak.html" class="hover:text-gray-600" onclick="closeMobileMenu()">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="mt-20">
+        <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-tint to-white py-20 md:py-28 flex items-center justify-center min-h-[calc(100vh-80px)]">
+            <div class="absolute -top-24 -right-24 w-64 h-64 md:w-96 md:h-96 rounded-full bg-primary/10 blur-3xl"></div>
+            <div class="container text-center">
+                <img src="./foto.jpeg" alt="Foto Profil" class="mx-auto mb-6 w-32 h-32 md:w-40 md:h-40 rounded-full ring-4 ring-white shadow-lg fade-in" style="object-fit:cover">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-3 text-primary fade-in delay-100">Okta Mukaffa</h1>
+                <p class="text-lg md:text-2xl font-normal mb-8 text-gray-700 max-w-2xl mx-auto fade-in delay-200">Selamat datang di portfolio pribadi saya. Saya seorang pemula/masih belajarrr yang senang membangun pengalaman digital yang rapi, cepat, dan mudah digunakan.</p>
+                <div class="flex items-center justify-center gap-4 fade-in delay-300">
+                    <a href="./kontak.html" class="btn-primary">Hubungi Saya Okta Mukaffa</a>
+                    <a href="./tentang.html" class="btn-ghost">Tentang Saya Okta Mukaffa</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white py-8">
+        <div class="container text-center text-gray-300">
+            <p>&copy; 2025 Okta Mukaffa. Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

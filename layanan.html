@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keahlian & Layanan - Nama Saya Okta Mukaffa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#0A313E',surface:'#F7F7F7',tint:'#EBF1F0',text:'#333333'},fontFamily:{'sans':['Inter','sans-serif']}}}};</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="antialiased bg-surface text-text">
+  <header class="bg-white/80 backdrop-blur shadow-sm py-4 fixed top-0 left-0 w-full z-50">
+    <nav class="container flex justify-between items-center">
+      <a href="./index.html" class="text-2xl font-bold text-primary">Nama Saya Okta Mukaffa</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="./index.html" class="nav-link">Beranda</a></li>
+        <li><a href="./tentang.html" class="nav-link">Tentang</a></li>
+        <li><a href="./layanan.html" class="nav-link">Layanan</a></li>
+        <li><a href="./testimoni.html" class="nav-link">Testimoni</a></li>
+        <li><a href="./kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+      <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu-overlay" class="md:hidden fixed inset-0 bg-white z-40 hidden">
+      <div class="flex justify-end p-4">
+        <button id="close-mobile-menu" class="text-primary hover:text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <ul class="flex flex-col items-center space-y-4 text-primary text-lg">
+        <li><a href="./index.html" onclick="closeMobileMenu()">Beranda</a></li>
+        <li><a href="./tentang.html" onclick="closeMobileMenu()">Tentang</a></li>
+        <li><a href="./layanan.html" onclick="closeMobileMenu()">Layanan</a></li>
+        <li><a href="./testimoni.html" onclick="closeMobileMenu()">Testimoni</a></li>
+        <li><a href="./kontak.html" onclick="closeMobileMenu()">Kontak</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="mt-24">
+    <section class="py-10 md:py-16">
+      <div class="container">
+        <h1 class="text-3xl md:text-4xl font-bold section-title text-primary">Keahlian & Layanan</h1>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          <article class="card p-6 fade-in">
+            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop" alt="Pengembangan Web" class="rounded-md mb-4 w-full h-40 object-cover">
+            <h3 class="text-xl font-semibold text-primary mb-2">Pengembangan Web</h3>
+            <p class="text-gray-600 text-sm">Membangun website modern dengan HTML, CSS, JavaScript. Fokus pada performa, aksesibilitas, dan SEO dasar.</p>
+          </article>
+          <article class="card p-6 fade-in delay-100">
+            <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=1200&auto=format&fit=crop" alt="Desain UI/UX" class="rounded-md mb-4 w-full h-40 object-cover">
+            <h3 class="text-xl font-semibold text-primary mb-2">Desain UI/UX</h3>
+            <p class="text-gray-600 text-sm">Menyusun wireframe dan desain high-fidelity. Menjaga konsistensi brand dan kemudahan penggunaan.</p>
+          </article>
+          <article class="card p-6 fade-in delay-200">
+            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Editing Konten" class="rounded-md mb-4 w-full h-40 object-cover">
+            <h3 class="text-xl font-semibold text-primary mb-2">Editing Konten</h3>
+            <p class="text-gray-600 text-sm">Pengeditan gambar dan video ringan untuk kebutuhan media sosial dan presentasi.</p>
+          </article>
+          <article class="card p-6 fade-in">
+            <img src="https://images.unsplash.com/photo-1517817748490-58e3b4079ab2?q=80&w=1200&auto=format&fit=crop" alt="Brand & Identitas" class="rounded-md mb-4 w-full h-40 object-cover">
+            <h3 class="text-xl font-semibold text-primary mb-2">Brand & Identitas</h3>
+            <p class="text-gray-600 text-sm">Membantu membuat logo sederhana, palet warna, dan tipografi untuk brand kecil/UMKM.</p>
+          </article>
+          <article class="card p-6 fade-in delay-100">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="Automasi" class="rounded-md mb-4 w-full h-40 object-cover">
+            <h3 class="text-xl font-semibold text-primary mb-2">Automasi Ringan</h3>
+            <p class="text-gray-600 text-sm">Menyusun skrip kecil untuk mempercepat alur kerja, seperti pengolahan file atau laporan.</p>
+          </article>
+          <article class="card p-6 fade-in delay-200">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="Konsultasi" class="rounded-md mb-4 w-full h-40 object-cover">
+            <h3 class="text-xl font-semibold text-primary mb-2">Konsultasi</h3>
+            <p class="text-gray-600 text-sm">Diskusi kebutuhan, review website, dan rekomendasi perbaikan yang praktis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary text-white py-8">
+    <div class="container text-center text-gray-300">
+      <p>© 2025 Okta Mukaffa. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
